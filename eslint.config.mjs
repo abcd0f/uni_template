@@ -35,5 +35,5 @@ export default uniHelper({
     node: true, // 代码运行在 Node.js 环境
     es6: true // 启用 ES6 语法特性支持
   },
-  ignores: ['src/env.d.ts']
+  ignores: ['src/env.d.ts'] // 忽略的文件或目录
 });
