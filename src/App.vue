@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
+import { onHide, onLaunch, onShow } from '@dcloudio/uni-app';
+
 onLaunch(() => {});
 onShow(() => {});
 onHide(() => {});
 </script>
+
 <style></style>

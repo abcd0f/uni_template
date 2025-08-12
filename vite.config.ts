@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
 import uni from '@dcloudio/vite-plugin-uni';
-import UniPages from '@uni-helper/vite-plugin-uni-pages';
 import UniLayouts from '@uni-helper/vite-plugin-uni-layouts';
+import UniPages from '@uni-helper/vite-plugin-uni-pages';
+import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,9 +13,9 @@ export default defineConfig({
        * 排除的页面，相对于 dir 和 subPackages
        * @default []
        */
-      exclude: ['**/components/**/*.*']
+      exclude: ['**/components/**/*.*'],
     }),
     UniLayouts(),
-    uni()
-  ]
+    uni(),
+  ],
 });

@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 
 export interface TabbarItem {
   name: string;
@@ -10,7 +10,7 @@ export interface TabbarItem {
 
 const tabbarItems = ref<TabbarItem[]>([
   { name: 'home', value: null, active: true, title: '首页', icon: 'home' },
-  { name: 'my', value: null, active: false, title: '我的', icon: 'user' }
+  { name: 'my', value: null, active: false, title: '我的', icon: 'user' },
 ]);
 
 export function useTabbar() {
@@ -34,10 +34,11 @@ export function useTabbar() {
   };
 
   const setTabbarItemActive = (name: string) => {
-    tabbarItems.value.forEach(item => {
+    tabbarItems.value.forEach((item) => {
       if (item.name === name) {
         item.active = true;
-      } else {
+      }
+      else {
         item.active = false;
       }
     });
@@ -48,6 +49,6 @@ export function useTabbar() {
     activeTabbar,
     getTabbarItemValue,
     setTabbarItem,
-    setTabbarItemActive
+    setTabbarItemActive,
   };
 }

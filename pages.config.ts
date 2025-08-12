@@ -7,30 +7,30 @@ export default defineUniPages({
   easycom: {
     autoscan: true,
     custom: {
-      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue'
-    }
+      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue',
+    },
   },
   pages: [
     {
       path: 'pages/index/index',
       layout: 'tabbar',
       type: 'home',
-      name: 'home'
+      name: 'home',
     },
     {
       path: 'pages/my/index',
       layout: 'tabbar',
       name: 'my',
-      type: 'page'
+      type: 'page',
     },
     {
       path: 'pages/clock/index',
-      type: 'page'
+      type: 'page',
     },
     {
       path: 'pages/my/index',
-      type: 'page'
-    }
+      type: 'page',
+    },
   ],
   globalStyle: {
     // 导航栏配置
@@ -50,7 +50,7 @@ export default defineUniPages({
 
     // 动画配置
     animationType: 'pop-in',
-    animationDuration: 300
+    animationDuration: 300,
   },
   tabBar: {
     custom: true,
@@ -66,11 +66,11 @@ export default defineUniPages({
     borderStyle: '@tabBorderStyle',
     list: [
       {
-        pagePath: 'pages/index/index'
+        pagePath: 'pages/index/index',
       },
       {
-        pagePath: 'pages/my/index'
-      }
-    ]
-  }
+        pagePath: 'pages/my/index',
+      },
+    ],
+  },
 });

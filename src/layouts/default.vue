@@ -5,8 +5,8 @@ export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared'
-  }
+    styleIsolation: 'shared',
+  },
 };
 </script>
 

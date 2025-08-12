@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { onMounted, nextTick } from 'vue';
-import { useRouter, useRoute } from 'uni-mini-router';
+import { useRoute, useRouter } from 'uni-mini-router';
+import { nextTick, onMounted } from 'vue';
 import { useTabbar } from '@/composables/useTabbar';
 
 const router = useRouter();
@@ -31,8 +31,8 @@ export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared'
-  }
+    styleIsolation: 'shared',
+  },
 };
 </script>
 

@@ -4,8 +4,6 @@ import { createRouter } from 'uni-mini-router';
 import { pages, subPackages } from 'virtual:uni-pages';
 
 function generateRoutes() {
-  console.log(pages, '111111');
-
   const routes = pages.map(page => {
     const newPath = `/${page.path}`;
     return { ...page, path: newPath };
@@ -37,7 +35,10 @@ router.beforeEach((to, from, next) => {
   if (to.name === 'demo-protected') {
     console.log('🛡️ 检测到访问受保护页面');
 
-    return new Promise<void>((resolve, reject) => {});
+    return new Promise<void>((resolve, reject) => {
+      console.log(`🔒 检查用户权限...`);
+      console.log(resolve, reject);
+    });
   }
 
   // 继续导航
