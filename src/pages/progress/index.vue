@@ -1,11 +1,7 @@
 <template>
-  <view>
-    <Tabbar :value="2" />
-  </view>
+  <view></view>
 </template>
 
-<script setup lang="ts">
-import Tabbar from '@/components/tabbar/index.vue';
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>

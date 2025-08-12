@@ -1,0 +1,76 @@
+/**
+ * @see https://uni-helper.js.org/vite-plugin-uni-pages
+ */
+import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages';
+
+export default defineUniPages({
+  easycom: {
+    autoscan: true,
+    custom: {
+      '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue'
+    }
+  },
+  pages: [
+    {
+      path: 'pages/index/index',
+      layout: 'tabbar',
+      type: 'home',
+      name: 'home'
+    },
+    {
+      path: 'pages/my/index',
+      layout: 'tabbar',
+      name: 'my',
+      type: 'page'
+    },
+    {
+      path: 'pages/clock/index',
+      type: 'page'
+    },
+    {
+      path: 'pages/my/index',
+      type: 'page'
+    }
+  ],
+  globalStyle: {
+    // 导航栏配置
+    navigationBarBackgroundColor: '@navBgColor',
+    navigationBarTextStyle: '@navTxtStyle',
+    navigationBarTitleText: 'Wot-Demo',
+
+    // 页面背景配置
+    backgroundColor: '@bgColor',
+    backgroundTextStyle: '@bgTxtStyle',
+    backgroundColorTop: '@bgColorTop',
+    backgroundColorBottom: '@bgColorBottom',
+
+    // 下拉刷新配置
+    enablePullDownRefresh: false,
+    onReachBottomDistance: 50,
+
+    // 动画配置
+    animationType: 'pop-in',
+    animationDuration: 300
+  },
+  tabBar: {
+    custom: true,
+    // #ifdef MP-ALIPAY
+    customize: true,
+    // 暂时不生效。4.71.2025061206-alpha已修复：https://uniapp.dcloud.net.cn/release-note-alpha.html#_4-71-2025061206-alpha，我们等正式版发布后更新。
+    overlay: true,
+    // #endif
+    height: '0',
+    color: '@tabColor',
+    selectedColor: '@tabSelectedColor',
+    backgroundColor: '@tabBgColor',
+    borderStyle: '@tabBorderStyle',
+    list: [
+      {
+        pagePath: 'pages/index/index'
+      },
+      {
+        pagePath: 'pages/my/index'
+      }
+    ]
+  }
+});

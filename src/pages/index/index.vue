@@ -1,11 +1,11 @@
 <template>
   <view>
-    <Tabbar :value="0" />
+    11111111
+    <wd-button>按钮</wd-button>
   </view>
 </template>
 
 <script setup lang="ts">
-import Tabbar from '@/components/tabbar/index.vue';
 </script>
 
 <style lang="scss" scoped></style>
