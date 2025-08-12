@@ -1,3 +1,7 @@
+/**
+ * @see https://uni-helper.js.org/eslint-config
+ */
+
 import uniHelper from '@uni-helper/eslint-config';
 
 export default uniHelper({
