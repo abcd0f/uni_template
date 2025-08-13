@@ -16,6 +16,48 @@
 
 ## 项目结构
 
+
+uni
+├─ .gitignore
+├─ eslint.config.mjs
+├─ index.html
+├─ package.json
+├─ pages.config.ts
+├─ pnpm-lock.yaml
+├─ README.md
+├─ tsconfig.json
+├─ vite.config.ts
+├─ src
+│  ├─ App.vue
+│  ├─ main.ts
+│  ├─ manifest.json
+│  ├─ pages.json
+│  ├─ uni.scss
+│  ├─ types
+│  │  ├─ env.d.ts
+│  │  ├─ shime-uni.d.ts
+│  │  └─ uni-pages.d.ts
+│  ├─ static
+│  │  └─ logo.png
+│  ├─ router
+│  │  └─ index.ts
+│  ├─ pages
+│  │  ├─ progress
+│  │  │  └─ index.vue
+│  │  ├─ my
+│  │  │  └─ index.vue
+│  │  ├─ index
+│  │  │  └─ index.vue
+│  │  └─ clock
+│  │     └─ index.vue
+│  ├─ layouts
+│  │  ├─ default.vue
+│  │  └─ tabbar.vue
+│  ├─ composables
+│  │  └─ useTabbar.ts
+│  └─ common
+│     └─ server.ts
+
 ```
 
 ```

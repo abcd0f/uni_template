@@ -63,5 +63,15 @@
     ]
   },
   "__esModule": true,
-  "subPackages": []
+  "subPackages": [
+    {
+      "root": "subPages",
+      "pages": [
+        {
+          "path": "index/index",
+          "type": "page"
+        }
+      ]
+    }
+  ]
 }
