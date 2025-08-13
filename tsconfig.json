@@ -37,6 +37,7 @@
     "src/**/*.vue",
     "types/**/*.d.ts",
     "pages.config.ts",
+    "manifest.config.ts",
     "vite.config.ts"
   ]
 }
