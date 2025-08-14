@@ -1,10 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <view class="text">
-    11111111
-    <wd-button>按钮</wd-button>
-  </view>
+  <view class="text"></view>
 </template>
 
 <style lang="scss" scoped></style>
@@ -14,7 +11,8 @@
   "name": "home",
   "layout": "tabbar",
   "style": {
-    "navigationBarTitleText": "首页"
+    "navigationBarTitleText": "首页",
+    "navigationStyle": "custom"
   }
 }
 </route>
