@@ -6,4 +6,8 @@ onShow(() => {});
 onHide(() => {});
 </script>
 
-<style></style>
+<style lang="scss">
+.dark {
+  color: var(--wot-dark-color);
+}
+</style>

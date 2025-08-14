@@ -10,20 +10,7 @@ export default defineUniPages({
       '^wd-(.*)': 'wot-design-uni/components/wd-$1/wd-$1.vue'
     }
   },
-  pages: [
-    {
-      path: 'pages/index/index',
-      layout: 'tabbar',
-      type: 'home',
-      name: 'home'
-    },
-    {
-      path: 'pages/my/index',
-      layout: 'tabbar',
-      name: 'my',
-      type: 'page'
-    }
-  ],
+  pages: [],
   globalStyle: {
     // 导航栏配置
     navigationBarBackgroundColor: '@navBgColor',

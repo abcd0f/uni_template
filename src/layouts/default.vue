@@ -1,18 +1,20 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useTheme } from '@/utils/useTheme';
+const { themeVars, theme } = useTheme();
+</script>
 
 <script lang="ts">
 export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared',
-  },
+    styleIsolation: 'shared'
+  }
 };
 </script>
 
 <template>
-  <wd-config-provider>
-    <!-- <wd-config-provider :theme-vars="themeVars" :theme="theme" :custom-class="`page-wraper ${theme}`"> -->
+  <wd-config-provider :theme-vars="themeVars" :custom-class="`page-wraper ${theme}`" :theme="theme">
     <slot />
     <wd-notify />
     <wd-message-box />

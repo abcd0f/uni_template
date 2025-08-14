@@ -9,26 +9,25 @@
     {
       "path": "pages/index/index",
       "type": "home",
-      "style": {},
+      "name": "home",
       "layout": "tabbar",
-      "name": "home"
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
     },
     {
       "path": "pages/clock/index",
-      "type": "page",
-      "style": {}
+      "type": "page"
     },
     {
       "path": "pages/my/index",
       "type": "page",
-      "style": {},
-      "layout": "tabbar",
-      "name": "my"
+      "name": "my",
+      "layout": "tabbar"
     },
     {
       "path": "pages/progress/index",
-      "type": "page",
-      "style": {}
+      "type": "page"
     }
   ],
   "globalStyle": {

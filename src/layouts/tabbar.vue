@@ -1,7 +1,10 @@
 <script lang="ts" setup>
+import { useTheme } from '@/utils/useTheme';
 import { useRoute, useRouter } from 'uni-mini-router';
 import { nextTick, onMounted } from 'vue';
-import { useTabbar } from '@/composables/useTabbar';
+import { useTabbar } from './hooks/useTabbar';
+
+const { themeVars, theme } = useTheme();
 
 const router = useRouter();
 
@@ -9,10 +12,10 @@ const route = useRoute();
 
 const { activeTabbar, getTabbarItemValue, setTabbarItemActive, tabbarList } = useTabbar();
 
-function handleTabbarChange({ value }: { value: string }) {
+const handleTabbarChange = ({ value }: { value: string }) => {
   setTabbarItemActive(value);
   router.pushTab({ name: value });
-}
+};
 
 onMounted(() => {
   // #ifdef APP-PLUS
@@ -31,13 +34,13 @@ export default {
   options: {
     addGlobalClass: true,
     virtualHost: true,
-    styleIsolation: 'shared',
-  },
+    styleIsolation: 'shared'
+  }
 };
 </script>
 
 <template>
-  <wd-config-provider>
+  <wd-config-provider :theme-vars="themeVars" :custom-class="`page-wraper ${theme}`" :theme="theme">
     <slot />
     <wd-tabbar
       :model-value="activeTabbar.name"
