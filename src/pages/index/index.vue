@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
-
 <template>
-  <view class="text"></view>
+  <view class="text">
+
+  </view>
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style lang="scss" scoped></style>
 

@@ -1,7 +1,7 @@
 <template>
   <view>
-    <wd-card title="基础设置">
-      <wd-cell-group border>
+    <DemoBlock title="基础设置" transparent>
+      <wd-cell-group border round>
         <!-- 暗黑模式切换 -->
         <wd-cell title="暗黑模式">
           <wd-switch v-model="isDark" size="18px" @change="toggleTheme()" />
@@ -13,7 +13,8 @@
           </view>
         </wd-cell>
       </wd-cell-group>
-    </wd-card>
+    </DemoBlock>
+
     <!-- 主题色选择 ActionSheet -->
     <wd-action-sheet
       v-model="showThemeColorSheet"
@@ -42,6 +43,7 @@
 
 <script setup lang="ts">
 import { useTheme } from '@/utils/useTheme';
+import DemoBlock from '@/components/DemoBlock.vue';
 
 const {
   isDark,
@@ -81,16 +83,11 @@ const handleThemeColorSelect = (option: any) => {
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid var(--wot-dark-color2);
     cursor: pointer;
 
     &:last-child {
       border-bottom: 0;
-    }
-
-    // 暗黑模式
-    .dark & {
-      border-color: #374151;
     }
 
     .theme-color-info {
@@ -101,21 +98,8 @@ const handleThemeColorSelect = (option: any) => {
       .color-circle {
         width: 1.5rem;
         height: 1.5rem;
-        border: 2px solid #e5e7eb;
+        border: 2px solid var(--wot-dark-color2);
         border-radius: 50%;
-
-        .dark & {
-          border-color: #4b5563;
-        }
-      }
-
-      .color-name {
-        font-size: 1rem;
-        color: #1f2937;
-
-        .dark & {
-          color: #e5e7eb;
-        }
       }
     }
   }
@@ -125,6 +109,10 @@ const handleThemeColorSelect = (option: any) => {
 <route lang="json">
 {
   "name": "my",
-  "layout": "tabbar"
+  "layout": "tabbar",
+  "style": {
+    "navigationBarTitleText": "我的",
+    "navigationStyle": "custom"
+  }
 }
 </route>

@@ -24,7 +24,11 @@
       "path": "pages/my/index",
       "type": "page",
       "name": "my",
-      "layout": "tabbar"
+      "layout": "tabbar",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
     },
     {
       "path": "pages/progress/index",
