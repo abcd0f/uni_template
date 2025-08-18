@@ -1,5 +1,5 @@
 {
-  "name": "重启计划",
+  "name": "",
   "appid": "__UNI__9F51105",
   "description": "",
   "versionName": "1.0.0",
@@ -39,15 +39,11 @@
           "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
         ]
       },
-
       "ios": {},
-
       "sdkConfigs": {}
     }
   },
-
   "quickapp": {},
-
   "mp-weixin": {
     "appid": "wxcb5333b0dd39379d",
     "setting": {
