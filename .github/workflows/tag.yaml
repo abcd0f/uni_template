@@ -1,0 +1,53 @@
+name: 根据 package.json 打标签
+
+on:
+  push:
+    branches:
+      - master # 监听 master 分支
+
+jobs:
+  tag-if-version-changed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 获取 package.json 版本
+        id: version
+        run: |
+          current_version=$(jq -r '.version' package.json)
+          echo "当前 package.json 版本: $current_version"
+          echo "current_version=$current_version" >> $GITHUB_ENV
+
+      - name: 获取最新 Git 标签
+        id: latest_tag
+        run: |
+          latest_tag=$(git describe --tags --abbrev=0 || echo "v0.0.0")
+          echo "最新 Git 标签: $latest_tag"
+          echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+
+      - name: 判断是否需要打新标签
+        id: check
+        run: |
+          # 去掉 v 前缀
+          tag_version="${{ env.latest_tag#v }}"
+          echo "标签版本: $tag_version"
+
+          if [ "$tag_version" == "${{ env.current_version }}" ]; then
+            echo "版本未改变，不打标签"
+            echo "should_tag=false" >> $GITHUB_ENV
+          else
+            echo "版本有改变，准备打标签"
+            echo "should_tag=true" >> $GITHUB_ENV
+          fi
+
+      - name: 创建并推送新标签
+        if: env.should_tag == 'true'
+        run: |
+          new_tag="v${{ env.current_version }}"
+          echo "生成新标签: $new_tag"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag $new_tag
+          git push origin $new_tag
+          echo "已将标签 $new_tag 推送到远程"
