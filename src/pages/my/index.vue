@@ -1,6 +1,6 @@
 <template>
   <view>
-    <DemoBlock title="基础设置" transparent>
+    <demo-block title="基础设置" transparent>
       <wd-cell-group border round>
         <!-- 暗黑模式切换 -->
         <wd-cell title="暗黑模式">
@@ -13,7 +13,7 @@
           </view>
         </wd-cell>
       </wd-cell-group>
-    </DemoBlock>
+    </demo-block>
 
     <!-- 主题色选择 ActionSheet -->
     <wd-action-sheet
