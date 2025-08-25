@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
-import path from 'node:path';
 import process from 'node:process';
 
+import UniManifest from '@uni-helper/vite-plugin-uni-manifest';
 import uni from '@dcloudio/vite-plugin-uni';
 import UniLayouts from '@uni-helper/vite-plugin-uni-layouts';
 import UniPages from '@uni-helper/vite-plugin-uni-pages';
@@ -26,6 +26,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
       }
     },
     plugins: [
+      UniManifest(),
       UniPages({
         mergePages: true,
         dts: 'types/uni-pages.d.ts',
