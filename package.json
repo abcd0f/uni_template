@@ -1,5 +1,5 @@
 {
-  "name": "uni-preset-vue",
+  "name": "uni",
   "version": "0.0.1",
   "scripts": {
     "lint": "eslint .",
