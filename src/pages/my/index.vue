@@ -98,7 +98,6 @@ const handleThemeColorSelect = (option: any) => {
       .color-circle {
         width: 1.5rem;
         height: 1.5rem;
-        border: 2px solid var(--wot-dark-color2);
         border-radius: 50%;
       }
     }
