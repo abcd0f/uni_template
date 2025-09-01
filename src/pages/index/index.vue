@@ -1,11 +1,9 @@
 <template>
-  <view class="text">
-
-  </view>
+  <view class="text"></view>
 </template>
 
 <script setup lang="ts">
-
+import { onLoad } from '@dcloudio/uni-app';
 </script>
 
 <style lang="scss" scoped></style>
