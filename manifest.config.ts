@@ -13,7 +13,7 @@ function getMode() {
 // 获取环境变量的范例
 const env = loadEnv(getMode(), path.resolve(process.cwd()));
 
-const { VITE_APP_TITLE, VITE_UNI_APPID, VITE_WX_APPID } = env;
+const { VITE_APP_TITLE, VITE_UNI_APPID, VITE_WX_APPID, VITE_PUBLIC_PATH } = env;
 
 export default defineManifestConfig({
   name: VITE_APP_TITLE,
@@ -70,7 +70,10 @@ export default defineManifestConfig({
   'mp-weixin': {
     appid: VITE_WX_APPID,
     setting: {
-      urlCheck: false
+      urlCheck: false,
+      es6: true, // es6转es5
+      postcss: true, // 上传代码时样式自动补全
+      minified: true // 上传代码时自动压缩
     },
     usingComponents: true,
     darkmode: true,
@@ -87,7 +90,10 @@ export default defineManifestConfig({
   },
   h5: {
     darkmode: true,
-    themeLocation: 'theme.json'
+    themeLocation: 'theme.json',
+    router: {
+      base: VITE_PUBLIC_PATH
+    }
   },
   vueVersion: '3'
 });

@@ -46,7 +46,10 @@
   "mp-weixin": {
     "appid": "wxcb5333b0dd39379d",
     "setting": {
-      "urlCheck": false
+      "urlCheck": false,
+      "es6": true,
+      "postcss": true,
+      "minified": true
     },
     "usingComponents": true,
     "darkmode": true,
@@ -67,6 +70,9 @@
   "vueVersion": "3",
   "h5": {
     "darkmode": true,
-    "themeLocation": "theme.json"
+    "themeLocation": "theme.json",
+    "router": {
+      "base": "./"
+    }
   }
 }
