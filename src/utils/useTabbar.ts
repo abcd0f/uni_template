@@ -8,16 +8,15 @@ export interface TabbarItem {
   icon: string;
 }
 
-const tabbarItems = ref<TabbarItem[]>([
-  { name: 'home', value: null, active: true, title: '首页', icon: 'home' },
-  { name: 'my', value: null, active: false, title: '我的', icon: 'user' }
-]);
-
 /**
  * 导出一个名为 useTabbar 的函数组件，用于管理底部导航栏的状态和行为
  * 该函数提供了一系列操作导航栏的方法和计算属性
+ * @param initialItems - 可选参数，初始的导航栏项数组
  */
-export function useTabbar() {
+export function useTabbar(initialItems?: TabbarItem[]) {
+  // 使用传入的初始项或默认项
+  const tabbarItems = ref<TabbarItem[]>(initialItems || []);
+
   /**
    * 计算属性，返回整个导航栏列表
    * 通过 computed 包装 tabbarItems 的响应式数据
@@ -70,11 +69,20 @@ export function useTabbar() {
     });
   };
 
+  /**
+   * 更新整个导航栏项列表
+   * @param newItems - 新的导航栏项数组
+   */
+  const updateTabbarItems = (newItems: TabbarItem[]) => {
+    tabbarItems.value = newItems;
+  };
+
   return {
     tabbarList,
     activeTabbar,
     getTabbarItemValue,
     setTabbarItem,
-    setTabbarItemActive
+    setTabbarItemActive,
+    updateTabbarItems
   };
 }
