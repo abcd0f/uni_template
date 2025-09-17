@@ -83,7 +83,7 @@ const handleThemeColorSelect = (option: any) => {
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--wot-dark-color2);
+    border-bottom: 1px solid var(--wot-dark-color3);
     cursor: pointer;
 
     &:last-child {

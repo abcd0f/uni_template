@@ -17,10 +17,6 @@
       }
     },
     {
-      "path": "pages/clock/index",
-      "type": "page"
-    },
-    {
       "path": "pages/my/index",
       "type": "page",
       "name": "my",
@@ -29,10 +25,6 @@
         "navigationBarTitleText": "我的",
         "navigationStyle": "custom"
       }
-    },
-    {
-      "path": "pages/progress/index",
-      "type": "page"
     }
   ],
   "globalStyle": {
