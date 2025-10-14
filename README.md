@@ -1,8 +1,23 @@
+<div align="center">
+
 # UniApp 项目模板
 
-## 🚀 项目简介
+<p align="center">
+  <img src="https://img.shields.io/badge/UniApp-3.0+-blue.svg" alt="UniApp">
+  <img src="https://img.shields.io/badge/Vue-3.5+-brightgreen.svg" alt="Vue">
+  <img src="https://img.shields.io/badge/TypeScript-5.9+-blue.svg" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Vite-5.2+-646CFF.svg" alt="Vite">
+  <img src="https://img.shields.io/badge/pnpm-7+-orange.svg" alt="pnpm">
+</p>
 
-基于 **UniApp** 开发的现代化项目模板，集成了多个优秀的开发插件和工具，提供开箱即用的开发体验。本模板采用 **TypeScript** + **Vite** 技术栈，支持多端开发。
+<p align="center">
+  基于 <strong>UniApp</strong> 开发的现代化项目模板，集成了多个优秀的开发插件和工具，提供开箱即用的开发体验。<br>
+  本模板采用 <strong>TypeScript</strong> + <strong>Vite</strong> 技术栈，支持多端开发。
+</p>
+
+</div>
+
+---
 
 ## ✨ 核心特性
 
