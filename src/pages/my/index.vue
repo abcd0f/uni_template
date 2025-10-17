@@ -45,6 +45,15 @@
 import { useTheme } from '@/utils/useTheme';
 import DemoBlock from '@/components/DemoBlock.vue';
 
+definePage({
+  name: 'my',
+  layout: 'tabbar',
+  style: {
+    navigationBarTitleText: '我的',
+    navigationStyle: 'custom'
+  }
+});
+
 const {
   isDark,
   currentThemeColor,
@@ -104,14 +113,3 @@ const handleThemeColorSelect = (option: any) => {
   }
 }
 </style>
-
-<route lang="json">
-{
-  "name": "my",
-  "layout": "tabbar",
-  "style": {
-    "navigationBarTitleText": "我的",
-    "navigationStyle": "custom"
-  }
-}
-</route>

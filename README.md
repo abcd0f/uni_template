@@ -156,6 +156,19 @@ export default {
 </template>
 ```
 
+或者使用 `definePage 宏`
+
+```ts
+definePage({
+  name: 'home',
+  layout: 'tabbar',
+  style: {
+    navigationBarTitleText: '首页',
+    navigationStyle: 'custom'
+  }
+});
+```
+
 **配置说明:**
 
 - `name`: 用于路由跳转的页面名称
