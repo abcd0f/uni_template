@@ -91,10 +91,10 @@ importers:
         specifier: ^0.1.11
         version: 0.1.11(rollup@4.46.2)
       '@uni-helper/vite-plugin-uni-manifest':
-        specifier: ^0.2.8
+        specifier: ^0.2.9
         version: 0.2.9(vite@5.2.8(@types/node@24.2.1)(sass@1.93.2)(terser@5.43.1))
       '@uni-helper/vite-plugin-uni-pages':
-        specifier: ^0.2.29
+        specifier: 0.2.29
         version: 0.2.29(vite@5.2.8(@types/node@24.2.1)(sass@1.93.2)(terser@5.43.1))
       '@vue/runtime-core':
         specifier: ^3.4.21
