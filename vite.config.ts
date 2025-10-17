@@ -2,7 +2,7 @@ import { fileURLToPath, URL } from 'node:url';
 import process from 'node:process';
 
 import UniManifest from '@uni-helper/vite-plugin-uni-manifest';
-import uni from '@dcloudio/vite-plugin-uni';
+import Uni from '@dcloudio/vite-plugin-uni';
 import UniLayouts from '@uni-helper/vite-plugin-uni-layouts';
 import UniPages from '@uni-helper/vite-plugin-uni-pages';
 import { defineConfig, loadEnv, type ConfigEnv, type UserConfigExport } from 'vite';
@@ -38,7 +38,7 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
         exclude: ['**/components/**/*.*']
       }),
       UniLayouts(),
-      uni()
+      Uni()
     ],
     server: {
       host: '0.0.0.0',

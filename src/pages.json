@@ -58,7 +58,6 @@
       }
     ]
   },
-  "__esModule": true,
   "subPackages": [
     {
       "root": "subPages",

@@ -28,6 +28,7 @@
       "vite/client",
       "@dcloudio/types",
       "wot-design-uni/global.d.ts",
+      "@uni-helper/vite-plugin-uni-pages"
     ],
   },
   "include": [
