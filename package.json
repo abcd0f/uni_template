@@ -82,7 +82,6 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-4070620250821001",
     "@types/node": "^24.8.1",
     "@uni-helper/eslint-config": "^0.5.0",
-    "@uni-helper/uni-types": "^1.0.0-alpha.6",
     "@uni-helper/vite-plugin-uni-layouts": "^0.1.11",
     "@uni-helper/vite-plugin-uni-manifest": "^0.2.8",
     "@uni-helper/vite-plugin-uni-pages": "^0.3.20",
