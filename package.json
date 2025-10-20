@@ -1,5 +1,5 @@
 {
-  "name": "uni",
+  "name": "uni-template",
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.9.0",
@@ -68,7 +68,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4070620250821001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4070620250821001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4070620250821001",
-    "pinia": "^3.0.3",
+    "pinia": "^2.3.1",
     "vue": "^3.4.38",
     "vue-i18n": "^9.14.5",
     "wot-design-uni": "^1.13.0"
@@ -88,7 +88,7 @@
     "@vue/runtime-core": "^3.5.22",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.38.0",
-    "sass": "^1.93.2",
+    "sass": "1.78.0",
     "typescript": "^5.9.3",
     "uni-mini-router": "^0.1.6",
     "vite": "^5.2.8",
