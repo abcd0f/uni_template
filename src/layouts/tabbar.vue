@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'uni-mini-router';
 import { nextTick, onMounted } from 'vue';
-import { useTheme } from '@/utils/useTheme';
-import { useTabbar, type TabbarItem } from '@/utils/useTabbar';
+import { useTheme } from '@/hooks/useTheme';
+import { useTabbar, type TabbarItem } from '@/hooks/useTabbar';
 
 const { themeVars, theme } = useTheme();
 

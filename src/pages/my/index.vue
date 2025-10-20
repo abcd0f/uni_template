@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { useTheme } from '@/utils/useTheme';
+import { useTheme } from '@/hooks/useTheme';
 import DemoBlock from '@/components/DemoBlock.vue';
 
 definePage({

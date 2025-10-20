@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useTheme } from '@/utils/useTheme';
+import { useTheme } from '@/hooks/useTheme';
 const { themeVars, theme } = useTheme();
 </script>
 
