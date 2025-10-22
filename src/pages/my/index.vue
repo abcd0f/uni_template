@@ -50,7 +50,6 @@ definePage({
   layout: 'tabbar',
   style: {
     navigationBarTitleText: '我的',
-    navigationStyle: 'custom'
   }
 });
 
