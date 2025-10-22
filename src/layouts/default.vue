@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/composables/useTheme';
 const { themeVars, theme } = useTheme();
 </script>
 

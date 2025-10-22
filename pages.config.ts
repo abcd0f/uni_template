@@ -29,7 +29,10 @@ export default defineUniPages({
 
     // 动画配置
     animationType: 'pop-in',
-    animationDuration: 300
+    animationDuration: 300,
+    "app-plus": {
+      bounce: "none"
+    }
   },
   tabBar: {
     custom: true,

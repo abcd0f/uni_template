@@ -1,21 +1,15 @@
 <script lang="ts" setup>
 import { useRoute, useRouter } from 'uni-mini-router';
 import { nextTick, onMounted } from 'vue';
-import { useTheme } from '@/hooks/useTheme';
-import { useTabbar, type TabbarItem } from '@/hooks/useTabbar';
-
-const { themeVars, theme } = useTheme();
+import { useTabbar } from '@/composables/useTabbar';
+import { useTheme } from '@/composables/useTheme';
 
 const router = useRouter();
 
 const route = useRoute();
 
-const tabbarList: TabbarItem[] = [
-  { name: 'home', value: null, active: true, title: '首页', icon: 'home' },
-  { name: 'my', value: null, active: false, title: '我的', icon: 'user' }
-];
-
-const { activeTabbar, getTabbarItemValue, setTabbarItemActive } = useTabbar(tabbarList);
+const { activeTabbar, getTabbarItemValue, setTabbarItemActive, tabbarList } = useTabbar();
+const { theme, themeVars } = useTheme();
 
 const handleTabbarChange = ({ value }: { value: string }) => {
   setTabbarItemActive(value);
