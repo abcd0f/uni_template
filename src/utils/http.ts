@@ -1,4 +1,4 @@
-/** 请求options参数 */
+/** 请求参数配置 */
 interface RequestOptions<T = any> {
   /** 请求地址 */
   url: string;
@@ -28,8 +28,15 @@ const DEFAULT_BASE_URL = import.meta.env.VITE_API_BASE_URL; // 根据实际情�
 
 /**
  * 发起网络请求的通用函数
- * @param options 请求配置参数
- * @returns 返回Promise对象
+ * @param {RequestOptions<T>} options 请求配置参数
+ * @returns {Promise<T>} 返回一个 Promise，resolve 时为响应数据
+ *
+ * @example
+ * ```ts
+ * interface UserInfo { name: string; age: number }
+ * const data = await request<UserInfo>({ url: '/user/info' })
+ * console.log(data.name)
+ * ```
  */
 export const request = <T = any>(options: RequestOptions<T>): Promise<T> => {
   return new Promise((resolve, reject) => {
