@@ -3,6 +3,23 @@
  */
 import { defineUniPages } from '@uni-helper/vite-plugin-uni-pages';
 
+import path from 'node:path';
+import process from 'node:process';
+import { loadEnv } from 'vite';
+
+
+// 手动解析命令行参数获取 mode
+function getMode() {
+  const args = process.argv.slice(2);
+  const modeFlagIndex = args.findIndex(arg => arg === '--mode');
+  return modeFlagIndex !== -1 ? args[modeFlagIndex + 1] : args[0] === 'build' ? 'production' : 'development'; // 默认 development
+}
+// 获取环境变量的范例
+const env = loadEnv(getMode(), path.resolve(process.cwd()));
+
+const { VITE_TITLE_TEXT } = env;
+
+
 export default defineUniPages({
   easycom: {
     autoscan: true,
@@ -15,7 +32,7 @@ export default defineUniPages({
     // 导航栏配置
     navigationBarBackgroundColor: '@navBgColor',
     navigationBarTextStyle: '@navTxtStyle',
-    navigationBarTitleText: 'Wot-Demo',
+    navigationBarTitleText: VITE_TITLE_TEXT,
 
     // 页面背景配置
     backgroundColor: '@bgColor',
