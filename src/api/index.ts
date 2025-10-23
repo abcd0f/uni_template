@@ -9,6 +9,6 @@ interface User {
 }
 export const sendApi = (): Promise<User[]> => {
   return request<User[]>({
-    url: '/api/send'
+    url: '/api/send',
   });
 };
