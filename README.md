@@ -4,10 +4,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/UniApp-3.0+-blue.svg" alt="UniApp">
-  <img src="https://img.shields.io/badge/Vue-3.5+-brightgreen.svg" alt="Vue">
+  <img src="https://img.shields.io/badge/Vue-3.3+-brightgreen.svg" alt="Vue">
   <img src="https://img.shields.io/badge/TypeScript-5.9+-blue.svg" alt="TypeScript">
   <img src="https://img.shields.io/badge/Vite-5.2+-646CFF.svg" alt="Vite">
-  <img src="https://img.shields.io/badge/pnpm-7+-orange.svg" alt="pnpm">
+  <img src="https://img.shields.io/badge/pnpm-9+-orange.svg" alt="pnpm">
 </p>
 
 <p align="center">
@@ -63,6 +63,8 @@ uni/
 │  ├── theme.json               # 主题配置文件
 │  ├── uni.scss                 # 全局样式
 │  ├── common/                  # 公共模块
+│  ├── components/              # 公共组件
+│  ├── composables/             # 自定义 hook 模块
 │  ├── layouts/                 # 布局组件
 │  │  ├── default.vue           # 默认布局
 │  │  └── tabbar.vue            # 底部导航布局
@@ -91,8 +93,8 @@ uni/
 
 ### 环境要求
 
-- Node.js >= 16
-- pnpm >= 7 (推荐使用 pnpm)
+- Node.js >= 18
+- pnpm >= 9 (推荐使用 pnpm)
 
 ### 安装依赖
 
