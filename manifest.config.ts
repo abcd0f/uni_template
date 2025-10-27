@@ -56,7 +56,9 @@ export default defineManifestConfig({
           '<uses-permission android:name="android.permission.FLASHLIGHT"/>',
           '<uses-feature android:name="android.hardware.camera"/>',
           '<uses-permission android:name="android.permission.WRITE_SETTINGS"/>'
-        ]
+        ],
+        abiFilters: ['armeabi-v7a', 'arm64-v8a', 'x86'],
+        minSdkVersion: 21
       },
 
       ios: {},
@@ -93,6 +95,12 @@ export default defineManifestConfig({
     themeLocation: 'theme.json',
     router: {
       base: VITE_PUBLIC_PATH
+    },
+    // 启动摇树优化
+    optimization: {
+      treeShaking: {
+        enable: true
+      }
     }
   },
   vueVersion: '3'
