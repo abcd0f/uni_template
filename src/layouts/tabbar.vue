@@ -43,7 +43,7 @@ export default {
     <slot />
     <wd-tabbar
       :model-value="activeTabbar.name"
-      bordered
+      :bordered="false"
       safe-area-inset-bottom
       placeholder
       fixed
