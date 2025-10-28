@@ -213,3 +213,8 @@ router.push({
 - [Uni Helper 插件集合](https://uni-helper.js.org/)
 - [uni-mini-router 路由库](https://moonofweisheng.github.io/uni-mini-router/)
 - [wot-design-uni 组件库](https://wot-design-uni.cn/)
+
+## 注意 ⚠️
+
+1. dependencies 包中，除`wot-design-uni`外不要随意升级包的版本
+2. 升级`uni包`的时候请使用`npx @dcloudio/uvm@latest`更新到最新正式版
