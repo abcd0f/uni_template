@@ -37,8 +37,7 @@
     {
       "path": "pages/empty/index",
       "type": "page",
-      "name": "home",
-      "layout": "default",
+      "name": "empty",
       "style": {
         "navigationBarTitleText": "空白页"
       }

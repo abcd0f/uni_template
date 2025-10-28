@@ -4,8 +4,7 @@
 
 <script setup lang="ts">
 definePage({
-  name: 'home',
-  layout: 'default',
+  name: 'empty',
   style: {
     navigationBarTitleText: '空白页'
   }

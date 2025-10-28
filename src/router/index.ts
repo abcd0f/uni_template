@@ -17,6 +17,7 @@ function generateRoutes() {
       routes.push(...subRoutes);
     });
   }
+
   return routes;
 }
 
