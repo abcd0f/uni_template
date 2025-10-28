@@ -1,6 +1,6 @@
-import type { ThemeColorOption, ThemeMode, ThemeState } from '@/composables/types/theme'
-import { defineStore } from 'pinia'
-import { themeColorOptions } from '@/composables/types/theme'
+import type { ThemeColorOption, ThemeMode, ThemeState } from '@/composables/types/theme';
+import { defineStore } from 'pinia';
+import { themeColorOptions } from '@/composables/types/theme';
 
 /**
  * 完整版主题状态管理
@@ -23,12 +23,12 @@ export const useThemeStore = defineStore('manualTheme', {
       darkColor: '#ffffff',
       darkColor2: '#e0e0e0',
       darkColor3: '#a0a0a0',
-      colorTheme: themeColorOptions[0].primary,
-    },
+      colorTheme: themeColorOptions[0].primary
+    }
   }),
 
   getters: {
-    isDark: state => state.theme === 'dark',
+    isDark: state => state.theme === 'dark'
   },
 
   actions: {
@@ -37,10 +37,10 @@ export const useThemeStore = defineStore('manualTheme', {
      * @param mode 指定主题模式，不传则自动切换
      */
     toggleTheme(mode?: ThemeMode) {
-      this.theme = mode || (this.theme === 'light' ? 'dark' : 'light')
-      this.hasUserSet = true // 标记用户已手动设置
-      this.followSystem = false // 不再跟随系统
-      this.setNavigationBarColor()
+      this.theme = mode || (this.theme === 'light' ? 'dark' : 'light');
+      this.hasUserSet = true; // 标记用户已手动设置
+      this.followSystem = false; // 不再跟随系统
+      this.setNavigationBarColor();
     },
 
     /**
@@ -48,10 +48,10 @@ export const useThemeStore = defineStore('manualTheme', {
      * @param follow 是否跟随系统
      */
     setFollowSystem(follow: boolean) {
-      this.followSystem = follow
+      this.followSystem = follow;
       if (follow) {
-        this.hasUserSet = false
-        this.initTheme() // 重新获取系统主题
+        this.hasUserSet = false;
+        this.initTheme(); // 重新获取系统主题
       }
     },
 
@@ -61,8 +61,8 @@ export const useThemeStore = defineStore('manualTheme', {
     setNavigationBarColor() {
       uni.setNavigationBarColor({
         frontColor: this.theme === 'light' ? '#000000' : '#ffffff',
-        backgroundColor: this.theme === 'light' ? '#ffffff' : '#000000',
-      })
+        backgroundColor: this.theme === 'light' ? '#ffffff' : '#000000'
+      });
     },
 
     /**
@@ -70,8 +70,8 @@ export const useThemeStore = defineStore('manualTheme', {
      * @param color 主题色选项
      */
     setCurrentThemeColor(color: ThemeColorOption) {
-      this.currentThemeColor = color
-      this.themeVars.colorTheme = color.primary
+      this.currentThemeColor = color;
+      this.themeVars.colorTheme = color.primary;
     },
 
     /**
@@ -82,24 +82,23 @@ export const useThemeStore = defineStore('manualTheme', {
       try {
         // #ifdef MP-WEIXIN
         // 微信小程序使用 getAppBaseInfo
-        const appBaseInfo = uni.getAppBaseInfo()
+        const appBaseInfo = uni.getAppBaseInfo();
         if (appBaseInfo && appBaseInfo.theme) {
-          return appBaseInfo.theme as ThemeMode
+          return appBaseInfo.theme as ThemeMode;
         }
         // #endif
 
         // #ifndef MP-WEIXIN
         // 其他平台使用 getSystemInfoSync
-        const systemInfo = uni.getSystemInfoSync()
+        const systemInfo = uni.getSystemInfoSync();
         if (systemInfo && systemInfo.theme) {
-          return systemInfo.theme as ThemeMode
+          return systemInfo.theme as ThemeMode;
         }
         // #endif
+      } catch (error) {
+        console.warn('获取系统主题失败:', error);
       }
-      catch (error) {
-        console.warn('获取系统主题失败:', error)
-      }
-      return 'light' // 默认返回 light
+      return 'light'; // 默认返回 light
     },
 
     /**
@@ -108,27 +107,26 @@ export const useThemeStore = defineStore('manualTheme', {
     initTheme() {
       // 如果用户已手动设置且不跟随系统，保持当前主题
       if (this.hasUserSet && !this.followSystem) {
-        console.log('使用用户设置的主题:', this.theme)
-        this.setNavigationBarColor()
-        return
+        console.log('使用用户设置的主题:', this.theme);
+        this.setNavigationBarColor();
+        return;
       }
 
       // 获取系统主题
-      const systemTheme = this.getSystemTheme()
+      const systemTheme = this.getSystemTheme();
 
       // 如果是首次启动或跟随系统，使用系统主题
       if (!this.hasUserSet || this.followSystem) {
-        this.theme = systemTheme
+        this.theme = systemTheme;
         if (!this.hasUserSet) {
-          this.followSystem = true
-          console.log('首次启动，使用系统主题:', this.theme)
-        }
-        else {
-          console.log('跟随系统主题:', this.theme)
+          this.followSystem = true;
+          console.log('首次启动，使用系统主题:', this.theme);
+        } else {
+          console.log('跟随系统主题:', this.theme);
         }
       }
 
-      this.setNavigationBarColor()
-    },
-  },
-})
+      this.setNavigationBarColor();
+    }
+  }
+});

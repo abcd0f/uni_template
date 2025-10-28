@@ -7,7 +7,6 @@ import path from 'node:path';
 import process from 'node:process';
 import { loadEnv } from 'vite';
 
-
 // 手动解析命令行参数获取 mode
 function getMode() {
   const args = process.argv.slice(2);
@@ -18,7 +17,6 @@ function getMode() {
 const env = loadEnv(getMode(), path.resolve(process.cwd()));
 
 const { VITE_TITLE_TEXT } = env;
-
 
 export default defineUniPages({
   easycom: {
@@ -47,8 +45,8 @@ export default defineUniPages({
     // 动画配置
     animationType: 'pop-in',
     animationDuration: 300,
-    "app-plus": {
-      bounce: "none"
+    'app-plus': {
+      bounce: 'none'
     }
   },
   tabBar: {
