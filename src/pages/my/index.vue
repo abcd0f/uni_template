@@ -30,7 +30,7 @@
           @click="handleThemeColorSelect(option)"
         >
           <view class="theme-color-info">
-            <view class="color-circle" :style="{ backgroundColor: option.primary }"></view>
+            <view class="color-circle" :style="{ backgroundColor: option.primary }" />
             <text class="color-name">{{ option.name }}</text>
           </view>
           <wd-icon v-if="currentThemeColor.value === option.value" name="check" :color="option.primary" size="20px" />
@@ -42,14 +42,14 @@
 </template>
 
 <script setup lang="ts">
-import { useTheme } from '@/composables/useTheme';
 import DemoBlock from '@/components/DemoBlock.vue';
+import { useTheme } from '@/composables/useTheme';
 
 definePage({
   name: 'my',
   layout: 'tabbar',
   style: {
-    navigationBarTitleText: '我的',
+    navigationBarTitleText: '我的'
   }
 });
 

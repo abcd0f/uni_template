@@ -1,36 +1,36 @@
-import type { ConfigProviderThemeVars } from 'wot-design-uni'
+import type { ConfigProviderThemeVars } from 'wot-design-uni';
 
 /**
  * 主题色选项接口
  */
 export interface ThemeColorOption {
-  name: string
-  value: string
-  primary: string
+  name: string;
+  value: string;
+  primary: string;
 }
 
 /**
  * 主题类型
  */
-export type ThemeMode = 'light' | 'dark'
+export type ThemeMode = 'light' | 'dark';
 
 /**
  * 主题状态接口
  */
 export interface ThemeState {
-  theme: ThemeMode
-  followSystem: boolean
-  hasUserSet: boolean
-  currentThemeColor: ThemeColorOption
-  themeVars: ConfigProviderThemeVars
+  theme: ThemeMode;
+  followSystem: boolean;
+  hasUserSet: boolean;
+  currentThemeColor: ThemeColorOption;
+  themeVars: ConfigProviderThemeVars;
 }
 
 /**
  * 系统主题状态接口（简化版）
  */
 export interface SystemThemeState {
-  theme: ThemeMode
-  themeVars: ConfigProviderThemeVars
+  theme: ThemeMode;
+  themeVars: ConfigProviderThemeVars;
 }
 
 /**
@@ -42,5 +42,5 @@ export const themeColorOptions: ThemeColorOption[] = [
   { name: '薄荷绿', value: 'green', primary: '#07C160' },
   { name: '樱花粉', value: 'pink', primary: '#FF69B4' },
   { name: '紫罗兰', value: 'purple', primary: '#8A2BE2' },
-  { name: '朱砂红', value: 'red', primary: '#FF4757' },
-]
+  { name: '朱砂红', value: 'red', primary: '#FF4757' }
+];
