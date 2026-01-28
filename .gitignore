@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-dist
+dist:titan
 *.local
 
 # Editor directories and files
@@ -19,3 +19,5 @@ dist
 *.njsproj
 *.sln
 *.sw?
+
+dist
